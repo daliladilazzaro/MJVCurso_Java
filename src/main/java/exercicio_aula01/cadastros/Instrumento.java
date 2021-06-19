@@ -1,4 +1,4 @@
-package cadastros;
+package exercicio_aula01.cadastros;
 /**
  *
  * @author dilaz

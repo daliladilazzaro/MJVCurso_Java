@@ -1,7 +1,7 @@
 
-package pedidos;
+package exercicio_aula01.pedidos;
 
-import cadastros.Produto;
+import exercicio_aula01.cadastros.Produto;
 import java.util.Date;
 import java.util.List;
 

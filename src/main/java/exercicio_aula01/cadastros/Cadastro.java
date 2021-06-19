@@ -1,4 +1,5 @@
-package cadastros;
+package exercicio_aula01.cadastros;
+
 /**
  *
  * @author dilaz
@@ -9,6 +10,24 @@ public class Cadastro {
     private String nome;
     private Long telefone;
     private String email;
+    private String endereco;
+    private String cpfCnpj;
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getCpfCnpj() {
+        return cpfCnpj;
+    }
+
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
+    }
 
     public Integer getId() {
         return id;
@@ -41,6 +60,5 @@ public class Cadastro {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
+
 }

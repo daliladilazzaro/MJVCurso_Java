@@ -1,4 +1,4 @@
-package transmissor;
+package exercicio_aula01.transmissor;
 import java.util.Date;
 /**
  *

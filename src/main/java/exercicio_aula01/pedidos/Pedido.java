@@ -1,7 +1,7 @@
+package exercicio_aula01.pedidos;
 
-package pedidos;
-
-import cadastros.Cadastro;
+import exercicio_aula01.cadastros.Cadastro;
+import exercicio_aula01.cadastros.Empresa;
 import java.util.Date;
 import java.util.List;
 
@@ -10,11 +10,39 @@ import java.util.List;
  * @author dilaz
  */
 public class Pedido {
+
     private int id;
     private Date data;
     private double valorTotal;
-    private Cadastro comprador; 
-    private List <PedidoItem> itens;
+    private Cadastro comprador;
+    private Integer ccf;
+    private Integer coo;
+    private Empresa empresa;
+
+    public Integer getCcf() {
+        return ccf;
+    }
+
+    public void setCcf(Integer ccf) {
+        this.ccf = ccf;
+    }
+
+    public Integer getCoo() {
+        return coo;
+    }
+
+    public void setCoo(Integer coo) {
+        this.coo = coo;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+    private List<PedidoItem> itens;
 
     public int getId() {
         return id;
@@ -55,6 +83,5 @@ public class Pedido {
     public void setItens(List<PedidoItem> itens) {
         this.itens = itens;
     }
-    
-    
+
 }

@@ -1,5 +1,6 @@
-package factory;
-import cadastros.Cadastro;
+package exercicio_aula01.factory;
+
+import exercicio_aula01.cadastros.Cadastro;
 
 /**
  *

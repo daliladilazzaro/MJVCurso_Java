@@ -1,10 +1,12 @@
-package main;
+package exercicio_aula01.main;
 
-import cadastros.Cadastro;
-import cadastros.Instrumento;
-import factory.FabricaCadastro;
-import pedidos.Pedido;
-import pedidos.PedidoItem;
+import exercicio_aula01.cadastros.Cadastro;
+import exercicio_aula01.cadastros.Empresa;
+import exercicio_aula01.cadastros.Instrumento;
+import exercicio_aula01.factory.FabricaCadastro;
+import static exercicio_aula01.main.PrinterApp.imprimirPedido;
+import exercicio_aula01.pedidos.Pedido;
+import exercicio_aula01.pedidos.PedidoItem;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -48,7 +50,7 @@ public class Application {
         instru4.setValorVenda(89.95);
         instru4.setMarca("Eagle");
         instru4.setTipoInstrumento(tipo);
-        
+
         tipo = FabricaCadastro.criarCadastro("Alice Palhetas", "alice@gmail.com", 4546484484461116l);
 
         Instrumento instru5 = new Instrumento();
@@ -57,7 +59,18 @@ public class Application {
         instru5.setMarca("Alice");
         instru5.setTipoInstrumento(tipo);
 
+        Empresa empresa=new Empresa(78597457l,97516583l);
+        Cadastro cadEmpresa = new Cadastro();
+        cadEmpresa.setCpfCnpj("785.426.785/0065-30");
+        cadEmpresa.setEmail("giannini@giannini.com");
+        cadEmpresa.setEndereco("Av. Tranquillo Giannini, 700 - Dist. Indus., Salto - SP, 13329-600");
+        cadEmpresa.setNome("Giannini Brasil");
+        cadEmpresa.setTelefone(11948752528l);
+        empresa.setCadastro(cadEmpresa);
+        
         Pedido p = new Pedido();
+        p.setEmpresa(empresa); //importante
+        
         Cadastro cliente = FabricaCadastro.criarCadastro("Lila", "lilalinda@gmail.com", 1516346151l);
 
         p.setComprador(cliente);
@@ -79,7 +92,7 @@ public class Application {
         item.setQuantidade(2.0);
         item.setValorVenda(instru2.getValorVenda());
         item.setValorTotal(item.getQuantidade() * item.getValorVenda());
-        
+
         itens.add(item);
 
         item = new PedidoItem();
@@ -87,7 +100,7 @@ public class Application {
         item.setQuantidade(75);
         item.setValorVenda(instru3.getValorVenda());
         item.setValorTotal(item.getQuantidade() * item.getValorVenda());
-        
+
         itens.add(item);
 
         item = new PedidoItem();
@@ -95,7 +108,7 @@ public class Application {
         item.setQuantidade(65);
         item.setValorVenda(instru4.getValorVenda());
         item.setValorTotal(item.getQuantidade() * item.getValorVenda());
-        
+
         itens.add(item);
 
         item = new PedidoItem();
@@ -106,10 +119,11 @@ public class Application {
 
         itens.add(item);
         p.setItens(itens);
-
-        System.out.println("Pedido Cliente " + p.getComprador().getNome());
-        for (PedidoItem i : p.getItens()) {
-            System.out.println(i.getProduto().getTitulo() + " " + i.getValorVenda() + " " + i.getValorTotal());
-        }
+//imprimirPedido(p);
+        PrinterApp.imprimirPedido(p);
+//        System.out.println("Pedido Cliente " + p.getComprador().getNome());
+//        for (PedidoItem i : p.getItens()) {
+//            System.out.println(i.getProduto().getTitulo() + " " + i.getValorVenda() + " " + i.getValorTotal());
+//        }
     }
 }

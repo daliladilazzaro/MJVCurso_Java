@@ -1,10 +1,10 @@
-package cadastros;
+package exercicio_aula01.cadastros;
 
 /**
  *
  * @author dilaz
  */
-public class Produto {
+public abstract class Produto {
 
     private Integer id;
     private String codigoBarras;
