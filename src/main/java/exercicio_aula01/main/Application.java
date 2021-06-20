@@ -60,7 +60,7 @@ public class Application {
         instru5.setMarca("Alice");
         instru5.setTipoInstrumento(tipo);
 
-        Empresa empresa=new Empresa(963521487l,54763215l);
+        Empresa empresa=new Empresa("963521487","54763215");
         Cadastro cadEmpresa = new Cadastro();
         cadEmpresa.setCpfCnpj("785426785006530");
         cadEmpresa.setEmail("giannini@giannini.com");

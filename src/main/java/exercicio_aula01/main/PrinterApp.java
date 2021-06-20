@@ -24,7 +24,12 @@ public class PrinterApp {
 //        mask.setMask(empresa.getCadastro().getCpfCnpj());
         leitor.append(String.format("CNPJ: %s\n", mask.valueToString(empresa.getCadastro().getCpfCnpj())));
 //        leitor.append(String.format("CNPJ: %s\n", empresa.getCadastro().getCpfCnpj()));
-        leitor.append(String.format("IE: %d\nIM: %d\n", empresa.getImpEstadual(), empresa.getImpMunicipal()));
+        MaskFormatter maskIE = new MaskFormatter("###.###.###");
+        maskIE.setValueContainsLiteralCharacters(false);
+        MaskFormatter maskIM = new MaskFormatter("##.###.###");
+        maskIM.setValueContainsLiteralCharacters(false);
+        leitor.append(String.format("IE: %s\nIM: %s\n", maskIE.valueToString(empresa.getImpEstadual()),
+                maskIM.valueToString(empresa.getImpMunicipal())));
         leitor.append("------------------------------------------------------------------\n");
         SimpleDateFormat dtFormatada = new SimpleDateFormat("dd/MM/yyy HH:mm:ss");
         String dtHrFormat = dtFormatada.format(pedido.getData());

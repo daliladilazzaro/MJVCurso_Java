@@ -8,8 +8,8 @@ import exercicio_aula01.cadastros.Cadastro;
  */
 public class Empresa {
     private Cadastro cadastro;
-	private Long impEstadual;
-	private Long impMunicipal;
+	private String impEstadual;
+	private String impMunicipal;
 
     public Cadastro getCadastro() {
         return cadastro;
@@ -19,16 +19,16 @@ public class Empresa {
         this.cadastro = cadastro;
     }
 
-    public Empresa(Long impEstadual, Long impMunicipal) {
+    public Empresa(String impEstadual, String impMunicipal) {
         this.impEstadual = impEstadual;
         this.impMunicipal = impMunicipal;
     }
 
-    public Long getImpMunicipal() {
+    public String getImpMunicipal() {
         return impMunicipal;
     }
 
-    public Long getImpEstadual() {
+    public String getImpEstadual() {
         return impEstadual;
     }
 	
