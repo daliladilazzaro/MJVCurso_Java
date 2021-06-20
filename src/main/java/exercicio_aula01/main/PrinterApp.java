@@ -20,8 +20,9 @@ public class PrinterApp {
         leitor.append(empresa.getCadastro().getNome() + "\n"
                 + empresa.getCadastro().getEndereco() + "\n");
         MaskFormatter mask = new MaskFormatter("###.###.###/####-##");
-        mask.setMask(empresa.getCadastro().getCpfCnpj());
-        leitor.append(String.format("CNPJ: %s\n", empresa.getCadastro().getCpfCnpj()));
+        mask.setValueContainsLiteralCharacters(false);
+//        mask.setMask(empresa.getCadastro().getCpfCnpj());
+        leitor.append(String.format("CNPJ: %s\n", mask.valueToString(empresa.getCadastro().getCpfCnpj())));
 //        leitor.append(String.format("CNPJ: %s\n", empresa.getCadastro().getCpfCnpj()));
         leitor.append(String.format("IE: %d\nIM: %d\n", empresa.getImpEstadual(), empresa.getImpMunicipal()));
         leitor.append("------------------------------------------------------------------\n");

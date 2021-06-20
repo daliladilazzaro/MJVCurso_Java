@@ -62,7 +62,7 @@ public class Application {
 
         Empresa empresa=new Empresa(963521487l,54763215l);
         Cadastro cadEmpresa = new Cadastro();
-        cadEmpresa.setCpfCnpj("785.426.785/0065-30");
+        cadEmpresa.setCpfCnpj("785426785006530");
         cadEmpresa.setEmail("giannini@giannini.com");
         cadEmpresa.setEndereco("Av. Tranquillo Giannini, 700 - Dist. Indus., Salto - SP, 13329-600");
         cadEmpresa.setNome("Giannini Brasil");
