@@ -7,6 +7,7 @@ import exercicio_aula01.factory.FabricaCadastro;
 import static exercicio_aula01.main.PrinterApp.imprimirPedido;
 import exercicio_aula01.pedidos.Pedido;
 import exercicio_aula01.pedidos.PedidoItem;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Cadastro tipo = FabricaCadastro.criarCadastro("Tagima", "instrumentos@gmail.com", 787171798411l);
 
         Instrumento instru = new Instrumento();
@@ -59,7 +60,7 @@ public class Application {
         instru5.setMarca("Alice");
         instru5.setTipoInstrumento(tipo);
 
-        Empresa empresa=new Empresa(78597457l,97516583l);
+        Empresa empresa=new Empresa(963521487l,54763215l);
         Cadastro cadEmpresa = new Cadastro();
         cadEmpresa.setCpfCnpj("785.426.785/0065-30");
         cadEmpresa.setEmail("giannini@giannini.com");
