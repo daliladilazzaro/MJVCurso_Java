@@ -2,6 +2,7 @@ package exercicio_aula01.main;
 
 import exercicio_aula01.cadastros.Cadastro;
 import exercicio_aula01.cadastros.Empresa;
+import exercicio_aula01.cadastros.Endereco;
 import exercicio_aula01.cadastros.Instrumento;
 import exercicio_aula01.factory.FabricaCadastro;
 import static exercicio_aula01.main.PrinterApp.imprimirPedido;
@@ -60,16 +61,28 @@ public class Application {
         instru5.setMarca("Alice");
         instru5.setTipoInstrumento(tipo);
 
-        Empresa empresa=new Empresa("963521487","54763215");
+        Empresa empresa=new Empresa(963521487L,54763215L);
         Cadastro cadEmpresa = new Cadastro();
-        cadEmpresa.setCpfCnpj("785426785006530");
+        cadEmpresa.setCpfCnpj("78542678006530");
         cadEmpresa.setEmail("giannini@giannini.com");
-        cadEmpresa.setEndereco("Av. Tranquillo Giannini, 700 - Dist. Indus., Salto - SP, 13329-600");
+//        cadEmpresa.setEndereco("Av. Tranquillo Giannini, 700 - Dist. Indus., Salto - SP, 13329-600");
         cadEmpresa.setNome("Giannini Brasil");
         cadEmpresa.setTelefone(11948752528l);
         empresa.setCadastro(cadEmpresa);
         
+        Endereco end = new Endereco();
+        end.setLogradouro("Av. Tranquillo Giannini");
+        end.setNumero("700");
+        end.setCidade("Salto");
+        end.setBairro("Dist.Indus.");
+        end.setUf("SP");
+        end.setCep(13329600L);
+        cadEmpresa.setEndereco(end);
+        
+        
         Pedido p = new Pedido();
+        p.setCcf(25);
+        p.setCoo(972);
         p.setEmpresa(empresa); //importante
         
         Cadastro cliente = FabricaCadastro.criarCadastro("Lila", "lilalinda@gmail.com", 1516346151l);
