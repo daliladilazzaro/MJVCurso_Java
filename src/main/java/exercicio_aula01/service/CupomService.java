@@ -1,29 +1,46 @@
-package exercicio_aula01.main;
+package exercicio_aula01.service;
 
 import exercicio_aula01.cadastros.Empresa;
 import exercicio_aula01.cadastros.Endereco;
 import exercicio_aula01.pedidos.Pedido;
 import exercicio_aula01.pedidos.PedidoItem;
 import exercicio_aula01.utils.FormatUtil;
+import exercicio_aula01.utils.ReaderApp;
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
-import javax.swing.text.MaskFormatter;
 
 /**
  *
  * @author dilaz
  */
-public class PrinterApp {
+public class CupomService {
+    
+    public static List<Pedido> gerarPedido(File dir, String nomeArquivo) throws Exception{
+        SimpleDateFormat formatador = new SimpleDateFormat("yyyyMMdd");
+        List<String> linhas = ReaderApp.read(dir, nomeArquivo);
+        
+        List<Pedido> pedidos = new ArrayList<Pedido>();
+        for (String linha : linhas) {
+            Pedido p = new Pedido();
+            p.setData(formatador.parse(linha.substring(0,8)));
+            p.setCcf(Integer.valueOf(linha.substring(8,10)));
+            p.setCoo(Integer.valueOf(linha.substring(10,13)));            
+            pedidos.add(p);
+        }
+        return pedidos;
+    }
 
-    public static void imprimirPedido(Pedido pedido) throws ParseException {
+    public static String gerarCupom(Pedido pedido) {
         Empresa empresa = pedido.getEmpresa();
         Endereco end = empresa.getCadastro().getEndereco();
 
         StringBuilder leitor = new StringBuilder();
         leitor.append("------------------------------------------------------------------\n");
         leitor.append(empresa.getCadastro().getNome() + "\n");
-        leitor.append(String.format("%s, %s, %s-%s-%s CEP:%s\n", end.getLogradouro(), end.getNumero(), 
+        leitor.append(String.format("%s, %s, %s-%s-%s CEP:%s\n", end.getLogradouro(), end.getNumero(),
                 end.getBairro(), end.getCidade(), end.getUf(), FormatUtil.formaraCEP(end.getCep().toString())));
 //                + empresa.getCadastro().getEndereco() + "\n");
         leitor.append(String.format("CNPJ: %s\n", FormatUtil.formataCNPJ(empresa.getCadastro().getCpfCnpj())));
@@ -47,18 +64,8 @@ public class PrinterApp {
         leitor.append(String.format("VALOR TOTAL: %.2f", pedido.getValorTotal()));
         leitor.append("\n------------------------------------------------------------------\n");
 
-        System.out.println(leitor.toString());
+//        System.out.println(leitor.toString());
+        return leitor.toString();
 
     }
 }
-//        MaskFormatter mask = new MaskFormatter("###.###.###/####-##");
-//        mask.setValueContainsLiteralCharacters(false);
-//        mask.setMask(empresa.getCadastro().getCpfCnpj());
-
-////        leitor.append(String.format("CNPJ: %s\n", empresa.getCadastro().getCpfCnpj()));
-//        MaskFormatter maskIE = new MaskFormatter("###.###.###");
-//        maskIE.setValueContainsLiteralCharacters(false);
-//        MaskFormatter maskIM = new MaskFormatter("##.###.###");
-//        maskIM.setValueContainsLiteralCharacters(false);
-//        leitor.append(String.format("IE: %s\nIM: %s\n", maskIE.valueToString(empresa.getIE()),
-//                maskIM.valueToString(empresa.getIM())));
