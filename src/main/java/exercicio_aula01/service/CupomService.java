@@ -61,7 +61,7 @@ public class CupomService {
             leitor.append(String.format("%-35s%10s%10s%10s\n", i.getProduto().getTitulo(), q, vd, vt));
         }
         leitor.append("\n------------------------------------------------------------------\n");
-        leitor.append(String.format("VALOR TOTAL: %.2f", pedido.getValorTotal()));
+        leitor.append(String.format("%-56s %.2f", "VALOR TOTAL: ", pedido.getValorTotal()));
         leitor.append("\n------------------------------------------------------------------\n");
 
 //        System.out.println(leitor.toString());
