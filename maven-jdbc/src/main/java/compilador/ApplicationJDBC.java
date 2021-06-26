@@ -3,6 +3,7 @@ package compilador;
 import dao.CadastroDAO;
 import java.util.List;
 import model.CadastroModel;
+import utils.FormatadorUtil;
 
 /**
  *
@@ -20,39 +21,42 @@ public class ApplicationJDBC {
 //        cadModel.setTelefone1(12756987423L);
 //        cadModel.setTelefone2(12996987423L);
 //        cadModel.setEmail("dalila@dalila.com");
-//        cadModel.setArea_atuacao("Programadora e Administradora");
+//        cadModel.setArea_atuacao("Dev e Adm");
 //        cadModel.setCep("45697521");
 //        cadModel.setEstado("SP");
 //        cadModel.setCidade("São Paulo");
-//        cadModel.setRua("VAv Brasil");
+//        cadModel.setRua("Av Brasil");
 //        cadModel.setNumero("479");
-//        cadModel.setComplemento("APTO 1 BL 2");
+//        cadModel.setComplemento("APTO1 BL2");
 //        cadModel.setBairro("Jardins");
 //        cadModel.setSite_instagram("@dilazzaro");
 //        cadModel.setObservacao("Gosto de tocar violao.");
 //        cadModel.setNome("Jos Maia");
 //        cadModel.setTelefone(66987466245L);
-//        testeIncluir(cadModel);
 //        testeAlterar("Claudia", cadModel);
+//        testeIncluir(cadModel);
 ////        teste excluir
-        cadModel.setId(2);
+//        cadModel.setId(5);
 //        testeExcluir(cadModel);
-//        testeBuscarLista();
-        testeBuscaID(cadModel);
+        testeBuscarLista();
+//        testeBuscaID(cadModel);
 
     }
 
     private static void testeBuscaID(CadastroModel cadModel) {
-         StringBuilder ler = new StringBuilder();
+        StringBuilder ler = new StringBuilder();
         Integer id = cadModel.getId();
         cadModel.setId(id);
         CadastroModel cad = cadDAO.buscarID(id);
         ler.append(String.format("%5d %5s %5s %5s %5d %5d %5s %5s %5s %5s %5s %5s %5s %5s %5s %5s %5s",
-                    cad.getId(), cad.getPf_pj(), cad.getNome(), cad.getCpf_cnpj(), cad.getTelefone1(), cad.getTelefone2(),
-                    cad.getEmail(), cad.getArea_atuacao(), cad.getCep(), cad.getEstado(), cad.getCidade(), cad.getRua(),
-                    cad.getNumero(), cad.getComplemento(), cad.getBairro(), cad.getSite_instagram(), cad.getObservacao()));
-            ler.append("\n\t------------------------------------------------------------------------------\n");
-            System.out.println(ler.toString());
+                cad.getId(), cad.getPf_pj(), cad.getNome(), FormatadorUtil.FormataCpfCnpj(cad.getCpf_cnpj()),
+                FormatadorUtil.FormataTelefone(cad.getTelefone1().toString()),
+                FormatadorUtil.FormataTelefone(cad.getTelefone2().toString()),
+                cad.getEmail(), cad.getArea_atuacao(), FormatadorUtil.FormataCEP(cad.getCep()), cad.getEstado(),
+                cad.getCidade(), cad.getRua(), cad.getNumero(), cad.getComplemento(), cad.getBairro(),
+                cad.getSite_instagram(), cad.getObservacao()));
+        ler.append("\n\t\t------------------------------------------------------------------------------\n");
+        System.out.println(ler.toString());
 
     }
 //      buscar a lista funciona
@@ -79,12 +83,12 @@ public class ApplicationJDBC {
             System.out.println("id: " + cad.getId());
             System.out.println("pf_pj: " + cad.getPf_pj());
             System.out.println("nome: " + cad.getNome());
-            System.out.println("Cpf_cnpj: " + cad.getCpf_cnpj());
-            System.out.println("telefone1: " + cad.getTelefone1());
-            System.out.println("telefone2: " + cad.getTelefone2());
+            System.out.println("Cpf_cnpj: " + FormatadorUtil.FormataCpfCnpj(cad.getCpf_cnpj()));
+            System.out.println("telefone1: " + FormatadorUtil.FormataTelefone(cad.getTelefone1().toString()));
+            System.out.println("telefone2: " + FormatadorUtil.FormataTelefone(cad.getTelefone2().toString()));
             System.out.println("email: " + cad.getEmail());
             System.out.println("area_atuacao: " + cad.getArea_atuacao());
-            System.out.println("cep: " + cad.getCep());
+            System.out.println("cep: " + FormatadorUtil.FormataCEP(cad.getCep()));
             System.out.println("estado: " + cad.getEstado());
             System.out.println("cidade: " + cad.getCidade());
             System.out.println("rua: " + cad.getRua());
