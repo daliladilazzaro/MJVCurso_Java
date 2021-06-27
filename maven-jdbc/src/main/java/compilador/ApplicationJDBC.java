@@ -79,7 +79,7 @@ public class ApplicationJDBC {
 //                    cad.getEmail(), cad.getArea_atuacao(), cad.getCep(), cad.getEstado(), cad.getCidade(), cad.getRua(),
 //                    cad.getNumero(), cad.getComplemento(), cad.getBairro(), cad.getSite_instagram(), cad.getObservacao()));
 //            ler.append("\n\t------------------------------------------------------------------------------\n");
-            System.out.println(ler.toString());
+//            System.out.println(ler.toString());
             System.out.println("id: " + cad.getId());
             System.out.println("pf_pj: " + cad.getPf_pj());
             System.out.println("nome: " + cad.getNome());
