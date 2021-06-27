@@ -12,12 +12,21 @@
 
 ## Links usados para ajudar a compor o projeto: 
 
-https://readme.so/pt/editor
+ - [README](https://readme.so/pt/editor)
+ - [DevMedia](https://www.devmedia.com.br/jpa-e-hibernate-acessando-dados-em-aplicacoes-java/32711)
+ - [MVNRepository](https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.22)
 
-https://www.devmedia.com.br/jpa-e-hibernate-acessando-dados-em-aplicacoes-java/32711
 
-https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.22
 
+## Exemplo de função utilizada
+
+```java
+import model.Cadastro;
+
+public List<Cadastro> busca(){
+        return em.createQuery("FROM "+ Cadastro.class.getName()).getResultList();
+    }
+```
 
 ## Authors
 
