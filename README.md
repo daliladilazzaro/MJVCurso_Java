@@ -9,16 +9,7 @@
 ### maven-jpa
 **Exercicio 3 com JPA**: utilizando Hibernate, Persistence, @Entity, @Id, @Table e @Column. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluida no pom.xml, e informações do banco de dados no persistence.xml.
 
-
-## Links usados para ajudar a compor o projeto: 
-
- - [README](https://readme.so/pt/editor)
- - [DevMedia](https://www.devmedia.com.br/jpa-e-hibernate-acessando-dados-em-aplicacoes-java/32711)
- - [MVNRepository](https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.22)
-
-
-
-## Exemplo de função utilizada
+### Exemplo de função utilizada com JPA
 
 ```java
 import model.Cadastro;
@@ -27,6 +18,14 @@ public List<Cadastro> busca(){
         return em.createQuery("FROM "+ Cadastro.class.getName()).getResultList();
     }
 ```
+
+
+## Links usados para ajudar a compor o projeto: 
+
+ - [README](https://readme.so/pt/editor)
+ - [DevMedia](https://www.devmedia.com.br/jpa-e-hibernate-acessando-dados-em-aplicacoes-java/32711)
+ - [MVNRepository](https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.22)
+
 
 ## Authors
 
