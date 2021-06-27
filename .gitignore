@@ -1,3 +1,5 @@
-/maven-jdbc/target/
-/java-project/target/
-/maven-jpa/target/
+bin/
+.settings
+.classpath
+.project
+.exe
