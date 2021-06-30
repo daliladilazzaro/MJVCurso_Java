@@ -1,4 +1,4 @@
-# Exercicios de Java pela MJV 
+# Exercicios de Java ☕ pela MJV 📚 
 
 ### java-project
 **Exercicio 1**: Este exercicio visa a criação de Cupom Fiscal, ele cria e imprime as informações em um arquivo txt. 
@@ -7,7 +7,7 @@
 **Exercicio 2 com JDBC**: Classes DAO, Model, Conexao, e Utils que foca inteiramente na formatação de objetos como CPF, CNPJ e CEP. Usando o banco Postgres e ambiente do DBeaver. Dependencia do Postgres incluida no arquivo pom.xml.
 
 ### maven-jpa
-**Exercicio 3 com JPA**: utilizando Hibernate, Persistence, **@Entity**, **@Id**, **@Table** e **@Column**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluida no pom.xml, e informações do banco de dados no persistence.xml.
+**Exercicio 3 com JPA**: utilizando Hibernate, Persistence, **_@Entity_**, **_@Id_**, **_@Table_** e **_@Column_**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluida no pom.xml, e informações do banco de dados no persistence.xml.
 
 ### Exemplo de função utilizada com JPA
 
