@@ -1,0 +1,5 @@
+jpa\Conexao.class
+compilador\ApplicationJPA.class
+utils\FormatadorUtil.class
+dao\CadastroDAO.class
+model\CadastroModel.class

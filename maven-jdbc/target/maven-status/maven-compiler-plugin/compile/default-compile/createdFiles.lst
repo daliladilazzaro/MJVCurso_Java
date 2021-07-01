@@ -1,0 +1,6 @@
+jdbc\Conexao.class
+operadores\Operadores.class
+utils\FormatadorUtil.class
+compilador\ApplicationJDBC.class
+dao\CadastroDAO.class
+model\CadastroModel.class
