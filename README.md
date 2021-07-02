@@ -1,13 +1,13 @@
-# Exercicios de Java ☕ pela MJV 📚 
+# Exercícios de Java ☕ pela MJV 📚 
 
 ### java-project
-**Exercicio 1**: Este exercicio visa a criação de Cupom Fiscal, ele cria e imprime as informações em um arquivo txt. 
+**Exercício 1**: Este exercicio visa a criação de Cupom Fiscal, ele cria e imprime as informações em um arquivo txt. 
 
 ### maven-jdbc
-**Exercicio 2 com JDBC**: Classes DAO, Model, Conexao, e Utils que foca inteiramente na formatação de objetos como CPF, CNPJ e CEP. Usando o banco Postgres e ambiente do DBeaver. Dependencia do Postgres incluida no arquivo pom.xml.
+**Exercício 2 com JDBC**: Classes DAO, Model, Conexao, e Utils que foca inteiramente na formatação de objetos como CPF, CNPJ e CEP. Usando o banco Postgres e ambiente do DBeaver. Dependencia do Postgres incluída no arquivo pom.xml.
 
 ### maven-jpa
-**Exercicio 3 com JPA**: utilizando Hibernate, Persistence, **_@Entity_**, **_@Id_**, **_@Table_** e **_@Column_**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluida no pom.xml, e informações do banco de dados no persistence.xml.
+**Exercício 3 com JPA**: utilizando Hibernate, Persistence, **_@Entity_**, **_@Id_**, **_@Table_** e **_@Column_**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluída no pom.xml, e informações do banco de dados no persistence.xml.
 
 
 ### Exemplo de função utilizada com JPA
@@ -21,7 +21,7 @@ public List<Cadastro> busca(){
 ```
 
 ### java-collections
-**Exercicio com List**: atividade focada na collections de List, nele contém um README.md próprio explicando para que ele serve, contendo um breve exemplo, e nele compõe código breve com seu conceito.
+**Exercício com List**: atividade focada na collections de List, nele contém um README.md próprio explicando para que ele serve, contendo um breve exemplo, e nele compõe código breve com seu conceito.
 
 ### spring-essentials
 **Exercicio com spring**: nele contém framework do *Spring*. Criando, salvando, deletando, e editando objetos em banco de dados.
