@@ -8,12 +8,12 @@ import javax.persistence.Table;
  *
  * @author dilaz
  */
-@Entity
-@Table(name = "cdspring_logradouro")
+//@Entity
+//@Table(name = "cdspring_logradouro")
 public class Logradouro {
-
-    @Id
-    private int id;
-    private String cep;
+//
+//    @Id
+//    private int id;
+//    private String cep;
 
 }

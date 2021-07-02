@@ -1,4 +1,4 @@
-package dalila.cadastro.model;
+package dalila.cadastro.model.enums;
 
 public enum Sexo {
 	F("Feminino"), M("Masculino");

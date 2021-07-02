@@ -1,71 +1,139 @@
 package dalila.cadastro.model;
 
+import dalila.cadastro.model.enums.Sexo;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 
 @Entity
-@Table(name = "cdspring_cadastro")
+@Table(name = "spring_cadastro")
 public class Cadastro {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-        @OneToOne
-        @JoinColumn(name="cdspring_endereco")
+	
+        @Column(length = 60, nullable = false)
+	private String nome;
+        @Column(length = 60, nullable = false)
+	private String email;
+        @Column(length = 9, nullable = false)
+	private String rg;
+        @Column(length = 11, nullable = false)
+	private String cpf;
+        @Column(length = 11, nullable = false)
+	private Long telefone;
+        
+        @Embedded
         private Endereco endereco;
         
-        @OneToMany
-        @JoinColumn(name ="cdspring_cadastro")
-        private List<Telefone> tel;
+	private String nacionalidade;
+	private LocalDate dataNascimento;
         
-	@Column(length = 2)
-	private String pf_pj;
-	@Column(length = 50)
-	private String nome;
-	@Column(length = 14)
-	private String cpf_cnpj;
-//	@Enumerated(EnumType.STRING)
-	@Column(columnDefinition = "char(1)")
-	private Sexo sexo;
-//	@Temporal(TemporalType.DATE)
-	private LocalDate data_nasc;
-	@Column(name="dh_cadastro", nullable = false)
-	private LocalDateTime datahora_cadastro;
-	@Column(length = 11)
-	private Long telefone1;
-	@Column(length = 11)
-	private Long telefone2;
-	@Column(length = 50)
-	private String email;
-	@Column(length = 50)
-	private String area_atuacao;
-	@Column(length = 8)
-	private String cep;
-	@Column(length = 2)
-	private String estado;
-	@Column(length = 20)
-	private String cidade;
-	@Column(length = 40)
-	private String rua;
-	@Column(length = 6)
-	private String numero;
-	@Column(length = 10)
-	private String complemento;
-	@Column(length = 15)
-	private String bairro;
-	@Column(length = 50)
-	private String site_instagram;
-	@Column(length = 255)
-	private String observacao;
+        @Embedded //embutir atributos
+        private ContatoEmergencia cont1;
+        @Embedded
+        @AttributeOverrides( {
+        @AttributeOverride(name="nome", column = @Column(name="ce2_nome") ),
+        @AttributeOverride(name="email", column = @Column(name="ce2_email") ),
+        @AttributeOverride(name="parentesco", column = @Column(name="ce2_parentesco") ),
+        @AttributeOverride(name="telefone", column = @Column(name="ce2_telefone") )
+	} )
+        private ContatoEmergencia cont2;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Long getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Long telefone) {
+        this.telefone = telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public ContatoEmergencia getCont1() {
+        return cont1;
+    }
+
+    public void setCont1(ContatoEmergencia cont1) {
+        this.cont1 = cont1;
+    }
+
+    public ContatoEmergencia getCont2() {
+        return cont2;
+    }
+
+    public void setCont2(ContatoEmergencia cont2) {
+        this.cont2 = cont2;
+    }
+
+	
 }

@@ -9,9 +9,9 @@ import javax.persistence.Table;
  *
  * @author dilaz
  */
-@Entity
-@Table(name = "cdspring_endereco")
+//@Entity
+//@Table(name = "cdspring_endereco")
 public class Professor {
-     @Id
-    private int id;
+//     @Id
+//    private int id;
 }
