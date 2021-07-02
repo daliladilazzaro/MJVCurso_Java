@@ -49,7 +49,7 @@ public class Endereco {
     private String numero;
 
     @ManyToOne
-    @JoinColumn(name = "cd_cep")
+    @JoinColumn(name = "tab_cep")
     private CEP cep;   
 ```
 
