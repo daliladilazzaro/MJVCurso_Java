@@ -21,7 +21,7 @@ public List<Cadastro> busca(){
 ```
 
 ### java-collections
-**Exercicio com List**: atividade focada na collections de List, nele contém um READEME.md próprio explicando para que ele serve, contendo um breve exemplo, e nele compõe código breve com seu conceito.
+**Exercicio com List**: atividade focada na collections de List, nele contém um README.md próprio explicando para que ele serve, contendo um breve exemplo, e nele compõe código breve com seu conceito.
 
 ### spring-essentials
 **Exercicio com spring**: nele contém framework do *Spring*. Criando, salvando, deletando, e editando objetos em banco de dados.
