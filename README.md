@@ -93,6 +93,11 @@ Hibernate:
  - [README](https://readme.so/pt/editor)
  - [DevMedia](https://www.devmedia.com.br/jpa-e-hibernate-acessando-dados-em-aplicacoes-java/32711)
  - [MVNRepository](https://mvnrepository.com/artifact/org.postgresql/postgresql/42.2.22)
+ - [SpringFramework](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-three-custom-queries-with-query-methods/)
+ - [SpringIo](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference)
+ - [Hibernate](https://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/#d0e714)
+ - [JavaPersistence](https://en.wikibooks.org/wiki/Java_Persistence)
+ - [BootCampSantander](https://web.digitalinnovation.one/track/santander-mobile-developer?tab=path)
 
 
 ## Authors
