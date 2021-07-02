@@ -98,6 +98,7 @@ Hibernate:
  - [Hibernate](https://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/#d0e714)
  - [JavaPersistence](https://en.wikibooks.org/wiki/Java_Persistence)
  - [BootCampSantander](https://web.digitalinnovation.one/track/santander-mobile-developer?tab=path)
+ - [Rest](https://spring.io/guides/tutorials/rest/)
 
 
 ## Authors
