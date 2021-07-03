@@ -43,7 +43,27 @@ Para o ***List***, ele dispões de métodos como:
 - remove(int) 
 - indexOf(Object)
 
+***Método add:*** adiciona um elemento ao final de um *ArrayList*, que é redimensionado automaticamente;
+
+***Método remove:*** exclui um elemento de um ArrayList, e reordena seus elementos de maneira automática;
+
+***Método inserir:*** insere um elemento usando índice e o ArrayList é redimensionado;
+
+***Método addRange:*** adiciona um array ou um *ArrayList* no final da coleção;
+
+***Método indexOf:*** retorna o índice de um elemento se ele estiver na coleção;
+
+***Método clone:*** duplica a ArrayList;
+
+***Método insert:*** insere um elemento na coleção, no local especificado pelo usuário;
+
+
 ![Logo](https://lh3.googleusercontent.com/proxy/eaQJjLTC_GV1qOzgH7DYNtbEW1fI2SwdJ0b_PUpjN47fgZuyn_OaEnKnem19qO53esvacuqUsSWEEOXBr_74bvo-EJseA05Btc3SGVyN8yxY2-tTE4Sb0xgyoHHPU1l9_HciB7r3-HT4ogWvow-Pww)
+
+
+O ***ArrayList*** tem sua forma de ordenação, como uma lista de objetos em Java, ele pode ser facilmente ordenada utilizando o método sort da *Collections*. Ele utilizar um método int compareTo(Object) para ordenar a lista, que retorna zero, quando o objeto comparado for igual a este objeto, se é negativo, se é menor, se é positivo, ou se este objeto for maior que o objeto dado. Este método está na interface Comparable, que pode ser implementado na classe que será ordenado em uma lista, ao chamar o método sort pode também ser passado como parâmetro além da lista que será ordenada um método que fará a ordenação. A classe string já implementa a interface Comparable que ordena em ordem alfabética seus elementos.
+
+As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos arrays se faz necessário realizar uma cópia de seu conteúdo para realizar algum tipo de processamento, como implementando um laço com o comando for, utilizando o método clone, utilizando System.arraycopy, utilizando Arrays.copyOf.
 
 ## Fontes
 
@@ -53,6 +73,9 @@ Para o ***List***, ele dispões de métodos como:
 - [Unicamp](https://www.ic.unicamp.br/~vanini/mc202/apresentacoes/Collections.pdf)
 - [Imagem](https://lh3.googleusercontent.com/proxy/eaQJjLTC_GV1qOzgH7DYNtbEW1fI2SwdJ0b_PUpjN47fgZuyn_OaEnKnem19qO53esvacuqUsSWEEOXBr_74bvo-EJseA05Btc3SGVyN8yxY2-tTE4Sb0xgyoHHPU1l9_HciB7r3-HT4ogWvow-Pww)
 - [DevMedia](https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162)
+- [DevMedia](https://www.devmedia.com.br/exemplos-com-arraylists-e-suas-propriedades-e-metodos-colecoes-estrutura-da-linguagem-parte-2/19255)
+- [Sippulse](https://www.sippulse.com/ordenando-lista-de-objetos-em-java/#:~:text=Uma%20lista%20de%20objetos%20em%20Java%20pode%20ser%20facilmente%20ordenada,lista%20para%20ver%20sua%20ordem.)
+- [DevMedia](https://www.devmedia.com.br/copiando-o-conteudo-de-um-array-em-java/26732)
 
 
 ## Authors
