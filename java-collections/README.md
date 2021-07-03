@@ -3,14 +3,29 @@
 O **List** é uma interface que a implementa o *ArrayList* de uma classe. O **List** é quem garante a flexibilidade de uma aplicação, permitindo que o mesmo objeto possa ser instanciado de maneiras diferentes em pontos diferentes da aplicação.
 Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. 
 
-### Exemplo de uma List com SpringBoot
+### Exemplo de uma ***ArrayList*** 
 
 ```java
 import java.util.List;
-import javax.persistence.JoinColumn;
+import java.util.ArrayList;
+        
+        ArrayList<Cadastro> cadastro = new ArrayList();
 
-@JoinColumn(name ="tab_cadastro")
-    private List<Cliente> cliente;
+        Cadastro cadInstrumento = new Cadastro("Guitarra", "Warlock", "Tagima", "Preta");
+        cadastro.add(cadInstrumento);
+
+        for (Cadastro instrumento : cadastro) {
+            System.out.println(instrumento);
+        }
+        System.out.println("Total de itens: \t\t" + cadastro.size());
+        
+        //Existe um objeto na lista?
+        System.out.println("\n\n*****Busca de item****"+"\n"+cadastro.contains(cadInstrumento));
+        
+        //Remove um objeto da lista
+        cadastro.remove(cadInstrumento);
+        System.out.println("\n\n*****Excluir item****"+"\n"+cadastro.contains(cadInstrumento));
+         
 ```
 
 Visando a ***Hirarquia*** do Collections, podemos enquadrar **List** em segundo (conforme imagem), elas são um objeto em sua estrutura de dados, capazes de armazenar ou agrupar referências a outros objetos. Estas classes e interfaces ``` java.util.List<E>``` são membros do pacote java.util, herdados de uma Collection.
