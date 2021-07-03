@@ -69,7 +69,7 @@ Para o ***List***, ele dispões de métodos como:
 
 O ***ArrayList*** tem sua forma de ordenação, como uma lista de objetos em Java, ele pode ser facilmente ordenada utilizando o método sort da *Collections*. Ele utilizar um método int compareTo(Object) para ordenar a lista, que retorna zero, quando o objeto comparado for igual a este objeto, se é negativo, se é menor, se é positivo, ou se este objeto for maior que o objeto dado. Este método está na interface Comparable, que pode ser implementado na classe que será ordenado em uma lista, ao chamar o método sort pode também ser passado como parâmetro além da lista que será ordenada um método que fará a ordenação. A classe string já implementa a interface Comparable que ordena em ordem alfabética seus elementos.
 
-As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos arrays se faz necessário realizar uma cópia de seu conteúdo para realizar algum tipo de processamento, como implementando um laço com o comando for, utilizando o método clone, utilizando System.arraycopy, utilizando Arrays.copyOf.
+As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos arrays se faz necessário realizar uma cópia de seu conteúdo para realizar algum tipo de processamento, como implementando um laço com o comando for, utilizando o método clone, System.arraycopy, e Arrays.copyOf.
 
 ## Fontes
 
