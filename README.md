@@ -107,4 +107,4 @@ Hibernate:
 
 ## Authors
 
-- [@daliladilazzaro](https://github.com/daliladilazzaro) 💁💖💻
+- [@daliladilazzaro](https://github.com/daliladilazzaro) 💁💖💻👩‍💻
