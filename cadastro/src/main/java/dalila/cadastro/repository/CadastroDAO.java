@@ -30,9 +30,22 @@ public class CadastroDAO {
     public Cadastro buscar(int id) {
         return em.find(Cadastro.class, id);
     }
+    
+    public void  excluir(Cadastro cad){
+         em.remove(cad);
+    }
+    public void  alterar(Cadastro cad){
+         em.merge(cad);
+    }
 
     public List<Cadastro> listAll() {
         Query quer=em.createQuery("SELECT e FROM CADASTRO e");
+        return quer.getResultList();
+    }
+    
+    public List<Cadastro> listAll(String nome){
+        Query quer=em.createQuery("SELECT e FROM Cadastro e WHERE e.nome = :abc");
+        quer.setParameter("abc", nome);
         return quer.getResultList();
     }
 }

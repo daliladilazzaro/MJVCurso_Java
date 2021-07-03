@@ -17,6 +17,7 @@ import org.springframework.stereotype.Repository;
  */
 //@Repository
 public interface AlunoDAO extends JpaRepository<Aluno, Integer> {
+//    List<Aluno> findByNomeContaining(Integer id);
 
 //    @PersistenceContext
 //    private EntityManager em;
