@@ -27,7 +27,7 @@ public List<Cadastro> busca(){
 **Exercicio com spring**: nele contém framework do *Spring*. Criando, salvando, deletando, e editando objetos em banco de dados.
 
 ### cadastro
-**Exercicio com *SpringBoot***: projeto inteitamente feito com springboot e dependencias, foram exercitados conceitos de ***@OneToMany***, ***@OneToOne***, ***@Temporal(TemporalType.DATE)***, ***@JoinColumn***, entre outros, e todos salvos em seus exemplos no banco de dados.
+**Exercicio com *SpringBoot***: projeto com exemplos e exercícios em aula, inteitamente feito com springboot e dependencias, foram exercitados conceitos de ***@OneToMany***, ***@OneToOne***, ***@Temporal(TemporalType.DATE)***, ***@JoinColumn***, entre outros, e todos salvos em seus exemplos no banco de dados.
 
 ### Exemplo de função utilizada com SpringBoot
 
@@ -52,6 +52,10 @@ public class Endereco {
     @JoinColumn(name = "tab_cep")
     private CEP cep;   
 ```
+
+### api
+***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, e implementados de forma personalizada, adicionados com api.
+
 
 ### docs_sql
 **Código SQL**: compõe exemplos de códigos realizados com o sql Postegres, e exemplos usados com jpa, seguido do Hibernate.
