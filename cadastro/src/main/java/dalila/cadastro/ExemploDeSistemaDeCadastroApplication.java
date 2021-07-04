@@ -53,7 +53,7 @@ public class ExemploDeSistemaDeCadastroApplication {
             ContatoEmergencia ce = new ContatoEmergencia();
             ce.setNome("Alfredo");
             ce.setTelefone(14597456212L);
-            c.setCont1(ce);
+            c.setContato1(ce);
             a.setCadastro(c);
 //            ad.save(a);
             ObjectMapper mpr = new ObjectMapper();

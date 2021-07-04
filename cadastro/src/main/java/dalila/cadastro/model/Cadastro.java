@@ -41,7 +41,7 @@ public class Cadastro {
 	private LocalDate dataNascimento;
         
         @Embedded //embutir atributos
-        private ContatoEmergencia cont1;
+        private ContatoEmergencia contato1;
         @Embedded
         @AttributeOverrides( {
         @AttributeOverride(name="nome", column = @Column(name="ce2_nome") ),
@@ -49,7 +49,7 @@ public class Cadastro {
         @AttributeOverride(name="parentesco", column = @Column(name="ce2_parentesco") ),
         @AttributeOverride(name="telefone", column = @Column(name="ce2_telefone") )
 	} )
-        private ContatoEmergencia cont2;
+        private ContatoEmergencia contato2;
 
     public Integer getId() {
         return id;
@@ -119,20 +119,20 @@ public class Cadastro {
         this.dataNascimento = dataNascimento;
     }
 
-    public ContatoEmergencia getCont1() {
-        return cont1;
+    public ContatoEmergencia getContato1() {
+        return contato1;
     }
 
-    public void setCont1(ContatoEmergencia cont1) {
-        this.cont1 = cont1;
+    public void setContato1(ContatoEmergencia contato1) {
+        this.contato1 = contato1;
     }
 
-    public ContatoEmergencia getCont2() {
-        return cont2;
+    public ContatoEmergencia getContato2() {
+        return contato2;
     }
 
-    public void setCont2(ContatoEmergencia cont2) {
-        this.cont2 = cont2;
+    public void setContato2(ContatoEmergencia contato2) {
+        this.contato2 = contato2;
     }
 
 	

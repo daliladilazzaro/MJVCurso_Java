@@ -26,7 +26,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AlunoController {
     @Autowired
     private AlunoDAO repos;
-    private CadastroDAO repos2;
     
     @GetMapping
     public Iterable<Aluno> list(){
