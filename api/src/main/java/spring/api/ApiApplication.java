@@ -24,10 +24,10 @@ public class ApiApplication {
             instru.setModelo("Warlock");
             instru.setCor("Branca");
        
-            instrumentoR.save(instru);
-//            ObjectMapper mpr = new ObjectMapper();
-//            String json = mpr.writeValueAsString(c);
-//            System.out.println(json);
+//            instrumentoR.save(instru);
+            ObjectMapper mpr = new ObjectMapper();
+            String json = mpr.writeValueAsString(instru);
+            System.out.println(json);
 
 
         };
