@@ -1,30 +1,11 @@
-# Exercícios de Java ☕ pela MJV 📚 
+# Curso de Java ☕ pela MJV 📚 
 
-### java-project
-**Exercício 1**: Este exercicio visa a criação de Cupom Fiscal, ele cria e imprime as informações em um arquivo txt. 
-
-### maven-jdbc
-**Exercício 2 com JDBC**: Classes DAO, Model, Conexao, e Utils que foca inteiramente na formatação de objetos como CPF, CNPJ e CEP. Usando o banco Postgres e ambiente do DBeaver. Dependencia do Postgres incluída no arquivo pom.xml.
-
-### maven-jpa
-**Exercício 3 com JPA**: utilizando Hibernate, Persistence, **_@Entity_**, **_@Id_**, **_@Table_** e **_@Column_**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluída no pom.xml, e informações do banco de dados no persistence.xml.
+Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, contém pastas com exercícios realizados ao decorrer do curso, com exemplos práticos e teóricos. Abaixo estão listados em no conteúdo de suas respectivas pastas, para fácil orientação. 
 
 
-### Exemplo de função utilizada com JPA
-
-```java
-import model.Cadastro;
-
-public List<Cadastro> busca(){
-        return em.createQuery("FROM "+ Cadastro.class.getName()).getResultList();
-    }
-```
-
-### java-collections
-**Exercício com List**: atividade focada na collections de List, nele contém um README.md próprio explicando para que ele serve, contendo um breve exemplo, e nele compõe código breve com seu conceito.
-
-### spring-essentials
-**Exercicio com spring**: nele contém framework do *Spring*. Criando, salvando, deletando, e editando objetos em banco de dados.
+## Pastas do Projeto 😸🥰
+### api
+***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, foi utilizado JPA para salvar informações no banco, Swagger para teste de API.
 
 ### cadastro
 **Exercicio com *SpringBoot***: projeto com exemplos e exercícios em aula, inteitamente feito com springboot e dependencias, foram exercitados conceitos de ***@OneToMany***, ***@OneToOne***, ***@Temporal(TemporalType.DATE)***, ***@JoinColumn***, entre outros, e todos salvos em seus exemplos no banco de dados.
@@ -52,10 +33,6 @@ public class Endereco {
     @JoinColumn(name = "tab_cep")
     private CEP cep;   
 ```
-
-### api
-***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, e implementados de forma personalizada, adicionados com api.
-
 
 ### docs_sql
 **Código SQL**: compõe exemplos de códigos realizados com o sql Postegres, e exemplos usados com jpa, seguido do Hibernate.
@@ -91,6 +68,32 @@ Hibernate:
     where
         id=?
 ```
+
+### java-collections
+**Exercício com List**: atividade focada na collections de List, nele contém um README.md próprio explicando para que ele serve, hierarquia, métodos e ordenação, contendo um breve exemplo, e nele compõe código breve com seu conceito.
+
+### java-project
+**Exercício 1**: Este exercicio visa a criação de Cupom Fiscal, ele cria e imprime as informações em um arquivo txt. 
+
+### maven-jdbc
+**Exercício 2 com JDBC**: Classes DAO, Model, Conexao, e Utils que foca inteiramente na formatação de objetos como CPF, CNPJ e CEP. Usando o banco Postgres e ambiente do DBeaver. Dependencia do Postgres incluída no arquivo pom.xml.
+
+### maven-jpa
+**Exercício 3 com JPA**: utilizando Hibernate, Persistence, **_@Entity_**, **_@Id_**, **_@Table_** e **_@Column_**. Salvando as informações no banco de dados Postgres. Dependencia do Hibernate incluída no pom.xml, e informações do banco de dados no persistence.xml.
+
+
+### Exemplo de função utilizada com JPA
+
+```java
+import model.Cadastro;
+
+public List<Cadastro> busca(){
+        return em.createQuery("FROM "+ Cadastro.class.getName()).getResultList();
+    }
+```
+
+### spring-essentials
+**Exercicio com spring**: nele contém framework do *Spring*. Criando, salvando, deletando, e editando objetos em banco de dados.
 
 ## Links usados para ajudar a compor o projeto: 
 
