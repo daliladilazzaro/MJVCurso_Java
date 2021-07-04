@@ -3,7 +3,7 @@
 ## Explicação sobre Interface List 👍
 
 O **List** é uma interface que a implementa o *ArrayList* de uma classe. O **List** é quem garante a flexibilidade de uma aplicação, permitindo que o mesmo objeto possa ser instanciado de maneiras diferentes em pontos diferentes da aplicação.
-Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. 
+Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. As classes principais que integram uma interface são Set, Queue e List, sendo elas conforme: o Set que define uma coleção que não contém valores duplicados, Queue que define uma coleção que representa uma fila, ou seja, implementa o modelo FIFO (First-In, First-Out) e List que define uma coleção ordenada que pode conter elementos duplicados, todas oriundas da java.util.
 
 ### Exemplo de uma ***ArrayList*** 
 
@@ -105,6 +105,7 @@ As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos
 - [DevMedia](https://www.devmedia.com.br/exemplos-com-arraylists-e-suas-propriedades-e-metodos-colecoes-estrutura-da-linguagem-parte-2/19255)
 - [Sippulse](https://www.sippulse.com/ordenando-lista-de-objetos-em-java/#:~:text=Uma%20lista%20de%20objetos%20em%20Java%20pode%20ser%20facilmente%20ordenada,lista%20para%20ver%20sua%20ordem.)
 - [DevMedia](https://www.devmedia.com.br/copiando-o-conteudo-de-um-array-em-java/26732)
+- [DevMedia](https://www.devmedia.com.br/visao-geral-da-interface-collection-em-java/25822)
 
 
 ## Authors
