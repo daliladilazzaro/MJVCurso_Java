@@ -69,13 +69,15 @@ Com o **Collections** manipulando duas categorias estruturadas *Coleções* e *M
 - retainAll(Collection)
 - toArray()
 
-Para o ***List***, ele dispões de métodos como: 
+Para o ***List***, ele dispões de alguns métodos exclusivos como: 
 - get(int) 
 - set(Object,int) 
 - add(Object,int)
 - remove(int) 
 - indexOf(Object)
 
+
+Alguns desses métodos tem como objetivo: 
 - ***Método add:*** adiciona um elemento ao final de um *ArrayList*, que é redimensionado automaticamente;
 - ***Método remove:*** exclui um elemento de um ArrayList, e reordena seus elementos de maneira automática;
 - ***Método inserir:*** insere um elemento usando índice e o ArrayList é redimensionado;
