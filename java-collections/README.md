@@ -3,7 +3,11 @@
 ## Explicação sobre Interface List 👍
 
 O **List** é uma interface que a implementa o *ArrayList* de uma classe. O **List** é quem garante a flexibilidade de uma aplicação, permitindo que o mesmo objeto possa ser instanciado de maneiras diferentes em pontos diferentes da aplicação.
-Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. As classes principais que integram uma interface são Set, Queue e List, sendo elas conforme: o Set que define uma coleção que não contém valores duplicados, Queue que define uma coleção que representa uma fila, ou seja, implementa o modelo FIFO (First-In, First-Out) e List que define uma coleção ordenada que pode conter elementos duplicados, todas oriundas da java.util.
+Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. As classes principais que integram uma interface são Set, Queue e List, sendo elas conforme: o 
+
+- **Set**: define uma coleção que não contém valores duplicados.
+- **Queue:** define uma coleção que representa uma fila, ou seja, implementa o modelo FIFO (First-In, First-Out).
+- **List:** que define uma coleção ordenada que pode conter elementos duplicados, todas oriundas da java.util.
 
 ### Exemplo de uma ***ArrayList*** 
 
@@ -48,6 +52,7 @@ Visando a ***Hirarquia*** do Collections, podemos enquadrar **List** em segundo 
 
 💢 Agora, com uma visão voltada para API, como ele é utilizado, o Vector e o ArayList são parecidos, podendo fácilmente confundilos por parecerem identicos. Quando não se tem domínio sobre eles, poderam ser usados como se fossem o mesmo, sem notar nenhuma diferença, o *Vector* é sincronizado, ele possui uma aplicação  que precisa thread-safe em determinado ponto, sua locação dinâmica é diferente das demais, ele duplica seu tamanho quando está cheio, mais que o ArrayList, o que pode ser útil se a aplicação precisa de constantemente ser aumentada.
 
+Sua usabilidade de cada método é relativa de acordo com a necessidade de cada aplicação.
 
 ## Métodos Collections e List 👍
 
@@ -71,19 +76,13 @@ Para o ***List***, ele dispões de métodos como:
 - remove(int) 
 - indexOf(Object)
 
-***Método add:*** adiciona um elemento ao final de um *ArrayList*, que é redimensionado automaticamente;
-
-***Método remove:*** exclui um elemento de um ArrayList, e reordena seus elementos de maneira automática;
-
-***Método inserir:*** insere um elemento usando índice e o ArrayList é redimensionado;
-
-***Método addRange:*** adiciona um array ou um *ArrayList* no final da coleção;
-
-***Método indexOf:*** retorna o índice de um elemento se ele estiver na coleção;
-
-***Método clone:*** duplica a ArrayList;
-
-***Método insert:*** insere um elemento na coleção, no local especificado pelo usuário;
+- ***Método add:*** adiciona um elemento ao final de um *ArrayList*, que é redimensionado automaticamente;
+- ***Método remove:*** exclui um elemento de um ArrayList, e reordena seus elementos de maneira automática;
+- ***Método inserir:*** insere um elemento usando índice e o ArrayList é redimensionado;
+- ***Método addRange:*** adiciona um array ou um *ArrayList* no final da coleção;
+- ***Método indexOf:*** retorna o índice de um elemento se ele estiver na coleção;
+- ***Método clone:*** duplica a ArrayList;
+- ***Método insert:*** insere um elemento na coleção, no local especificado pelo usuário;
 
 
 ![Logo](https://digaotutoriais.files.wordpress.com/2016/04/sem-tc3adtulo.jpg)
