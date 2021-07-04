@@ -1,6 +1,6 @@
 # Exercício Java ☕ Collections -> **List**   ✔️
 
-## Explicação sobre List
+## Explicação sobre Interface List 👍
 
 O **List** é uma interface que a implementa o *ArrayList* de uma classe. O **List** é quem garante a flexibilidade de uma aplicação, permitindo que o mesmo objeto possa ser instanciado de maneiras diferentes em pontos diferentes da aplicação.
 Uma interface **List**, se tem certeza dos métodos que seu objeto tem, mesmo estando instanciado por uma classe como *ArrayList*. 
@@ -30,9 +30,12 @@ import java.util.ArrayList;
          
 ```
 
+
+## Sobre Hierarquia 👍
+
 Visando a ***Hirarquia*** do Collections, podemos enquadrar **List** em segundo (conforme imagem), elas são um objeto em sua estrutura de dados, capazes de armazenar ou agrupar referências a outros objetos. Estas classes e interfaces ``` java.util.List<E>``` são membros do pacote java.util, herdados de uma Collection.
 
-## Diferença entre ArrayList, LinkedList e Vector
+## Diferença entre ArrayList, LinkedList e Vector 🙅
 
 
 ![Logo](https://www.devmedia.com.br/imagens/articles/268250/ArrayListI.png)
@@ -46,7 +49,7 @@ Visando a ***Hirarquia*** do Collections, podemos enquadrar **List** em segundo 
 💢 Agora, com uma visão voltada para API, como ele é utilizado, o Vector e o ArayList são parecidos, podendo fácilmente confundilos por parecerem identicos. Quando não se tem domínio sobre eles, poderam ser usados como se fossem o mesmo, sem notar nenhuma diferença, o *Vector* é sincronizado, ele possui uma aplicação  que precisa thread-safe em determinado ponto, sua locação dinâmica é diferente das demais, ele duplica seu tamanho quando está cheio, mais que o ArrayList, o que pode ser útil se a aplicação precisa de constantemente ser aumentada.
 
 
-## Exemplos de Métodos genéricos da Collections e List
+## Métodos Collections e List 👍
 
 Com o **Collections** manipulando duas categorias estruturadas *Coleções* e *Map*, tendo como disponibilidade da Interface Collection diversos métodos para que possamos trabalhar, como: 
 
@@ -83,9 +86,10 @@ Para o ***List***, ele dispões de métodos como:
 ***Método insert:*** insere um elemento na coleção, no local especificado pelo usuário;
 
 
-![Logo](https://lh3.googleusercontent.com/proxy/eaQJjLTC_GV1qOzgH7DYNtbEW1fI2SwdJ0b_PUpjN47fgZuyn_OaEnKnem19qO53esvacuqUsSWEEOXBr_74bvo-EJseA05Btc3SGVyN8yxY2-tTE4Sb0xgyoHHPU1l9_HciB7r3-HT4ogWvow-Pww)
+![Logo](https://digaotutoriais.files.wordpress.com/2016/04/sem-tc3adtulo.jpg)
 
-## Ordenação com ArrayList
+## Ordenação com ArrayList 👍
+
 O ***ArrayList*** tem sua forma de ordenação, como uma lista de objetos em Java, ele pode ser facilmente ordenada utilizando o método sort da *Collections*. Ele utilizar um método int compareTo(Object) para ordenar a lista, que retorna zero, quando o objeto comparado for igual a este objeto, se é negativo, se é menor, se é positivo, ou se este objeto for maior que o objeto dado. Este método está na interface Comparable, que pode ser implementado na classe que será ordenado em uma lista, ao chamar o método sort pode também ser passado como parâmetro além da lista que será ordenada um método que fará a ordenação. A classe string já implementa a interface Comparable que ordena em ordem alfabética seus elementos.
 
 As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos arrays se faz necessário realizar uma cópia de seu conteúdo para realizar algum tipo de processamento, como implementando um laço com o comando for, utilizando o método clone, System.arraycopy, e Arrays.copyOf.
@@ -96,7 +100,7 @@ As ***ArrayLists*** também podem ser inseridas entre si, pois quando utilizamos
 - [DevMedia](https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298)
 - [DevMedia](https://www.devmedia.com.br/colecoes-em-java-list/6026)
 - [Unicamp](https://www.ic.unicamp.br/~vanini/mc202/apresentacoes/Collections.pdf)
-- [Imagem](https://lh3.googleusercontent.com/proxy/eaQJjLTC_GV1qOzgH7DYNtbEW1fI2SwdJ0b_PUpjN47fgZuyn_OaEnKnem19qO53esvacuqUsSWEEOXBr_74bvo-EJseA05Btc3SGVyN8yxY2-tTE4Sb0xgyoHHPU1l9_HciB7r3-HT4ogWvow-Pww)
+- [Imagem](https://digaotutoriais.wordpress.com/2016/04/08/introducao-as-colection-em-java/)
 - [DevMedia](https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162)
 - [DevMedia](https://www.devmedia.com.br/exemplos-com-arraylists-e-suas-propriedades-e-metodos-colecoes-estrutura-da-linguagem-parte-2/19255)
 - [Sippulse](https://www.sippulse.com/ordenando-lista-de-objetos-em-java/#:~:text=Uma%20lista%20de%20objetos%20em%20Java%20pode%20ser%20facilmente%20ordenada,lista%20para%20ver%20sua%20ordem.)
