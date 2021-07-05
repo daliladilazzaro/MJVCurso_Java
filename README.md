@@ -185,8 +185,9 @@ public List<Cadastro> busca(){
  - [BootCampSantander](https://web.digitalinnovation.one/track/santander-mobile-developer?tab=path)
  - [Rest](https://spring.io/guides/tutorials/rest/)
  - [Oracle](https://www.oracle.com/br/technical-resources/articles/dsl/crud-rest-sb2-hibernate.html)
+ - [Swagger](http://localhost:8080/swagger-ui.html)
 
 
-## Authors
+## Authors 👩‍💻💖
 
-- [@daliladilazzaro](https://github.com/daliladilazzaro) 💁💖💻👩‍💻
+- [@daliladilazzaro](https://github.com/daliladilazzaro) 💁💖💻
