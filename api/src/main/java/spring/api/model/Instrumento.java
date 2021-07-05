@@ -1,12 +1,16 @@
 package spring.api.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import spring.api.model.enums.InstrumentoTipo;
 
@@ -29,6 +33,17 @@ public class Instrumento {
     private String modelo;
     @Column(length = 10)
     private String cor;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "cad_fornecedor", foreignKey = @ForeignKey(name = "fk_instrumento_fornecedor"))
+    private Fornecedor fornecedor;
+
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
 
     public String getCor() {
         return cor;
@@ -49,9 +64,6 @@ public class Instrumento {
     public void setTipo(InstrumentoTipo tipo) {
         this.tipo = tipo;
     }
-
-
-
 
     public String getMarca() {
         return marca;
