@@ -26,12 +26,13 @@ public class Instrumento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincrement
     private Integer id;
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private InstrumentoTipo tipo;
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     private String marca;
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     private String modelo;
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     private String cor;
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "cad_fornecedor", foreignKey = @ForeignKey(name = "fk_instrumento_fornecedor"))

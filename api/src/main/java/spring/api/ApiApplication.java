@@ -34,6 +34,7 @@ public class ApiApplication {
             fornece.setNumero("1500 lado B");
             fornece.setEstado("SP");
             fornece.setCidade("São Paulo");
+            fornece.setCep("02569050");
             fornece.setCnpj(14452369000154L);
             instru.setFornecedor(fornece);
             repository.save(instru);

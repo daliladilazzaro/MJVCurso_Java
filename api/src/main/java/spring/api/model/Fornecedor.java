@@ -18,20 +18,30 @@ public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincrement
     private Integer id;
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String empresa;
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String logradouro;
-    @Column(length = 50)
+    @Column(length = 40, nullable = false)
     private String bairro;
-    @Column(length = 50)
+    @Column(length = 20, nullable = false)
     private String numero;
-    @Column(length = 50)
+    @Column(length = 2, nullable = false)
     private String estado;
-    @Column(length = 50)
+    @Column(length = 30, nullable = false)
     private String cidade;
-    @Column(length = 14)
+    @Column(length = 8, nullable = false)
+    private String cep;
+    @Column(length = 14, nullable = false)
     private Long cnpj;
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
 
     public Long getCnpj() {
         return cnpj;
@@ -44,7 +54,6 @@ public class Fornecedor {
     public Integer getId() {
         return id;
     }
-
 
     public String getEmpresa() {
         return empresa;
