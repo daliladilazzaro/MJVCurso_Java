@@ -7,6 +7,8 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 ### api
 ***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, foi utilizado JPA para salvar informações no banco, Swagger para teste de API.
 
+![image](https://user-images.githubusercontent.com/62756757/124410066-fe978680-dd1f-11eb-84dd-69550a8dccd5.png)
+
 ### Exemplo de Referência da API
 
 #### Get all instrumentos
@@ -28,6 +30,9 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `tipo`      | `string` |  tipo |
+
+![image](https://user-images.githubusercontent.com/62756757/124410119-2686ea00-dd20-11eb-92b5-231ae484bd43.png)
+
 
 #### Request URL
 `http://localhost:8080/instrumentos`
