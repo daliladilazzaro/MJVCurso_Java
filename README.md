@@ -7,6 +7,55 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 ### api
 ***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, foi utilizado JPA para salvar informações no banco, Swagger para teste de API.
 
+### Referência da API
+
+#### Get all instrumentos
+
+```http
+  GET /instrumentos/{id} buscar
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `integer` | id |
+
+#### Get instrumentos
+
+```http
+  GET /instrumentos/filter/${tipo}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `tipo`      | `string` |  tipo |
+
+#### Request URL
+`http://localhost:8080/instrumentos`
+
+#### Curl
+`curl -X GET "http://localhost:8080/instrumentos" -H "accept: application/json"`  
+
+#### json
+```
+{
+  "cor": "string",
+  "fornecedor": {
+    "bairro": "string",
+    "cidade": "string",
+    "cnpj": 0,
+    "empresa": "string",
+    "estado": "string",
+    "id": 0,
+    "logradouro": "string",
+    "numero": "string"
+  },
+  "id": 0,
+  "marca": "string",
+  "modelo": "string",
+  "tipo": "GUI"
+}
+```
+
 ### cadastro
 **Exercicio com *SpringBoot***: projeto com exemplos e exercícios em aula, inteitamente feito com springboot e dependencias, foram exercitados conceitos de ***@OneToMany***, ***@OneToOne***, ***@Temporal(TemporalType.DATE)***, ***@JoinColumn***, entre outros, e todos salvos em seus exemplos no banco de dados.
 
