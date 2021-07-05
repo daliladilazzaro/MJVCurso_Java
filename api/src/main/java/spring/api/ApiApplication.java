@@ -27,6 +27,7 @@ public class ApiApplication {
             instru.setMarca("BcRich");
             instru.setModelo("Warlock");
             instru.setCor("Branca");
+            instru.setValor(5999.99F);
             Fornecedor fornece = new Fornecedor();
             fornece.setEmpresa("Giannini");
             fornece.setLogradouro("Rua do Giannini");

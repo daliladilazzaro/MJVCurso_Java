@@ -34,6 +34,8 @@ public class Instrumento {
     private String modelo;
     @Column(length = 10, nullable = false)
     private String cor;
+    @Column( nullable = false)
+    private Float valor;
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "cad_fornecedor", foreignKey = @ForeignKey(name = "fk_instrumento_fornecedor"))
     private Fornecedor fornecedor;
@@ -44,6 +46,14 @@ public class Instrumento {
 
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
+    }
+
+    public Float getValor() {
+        return valor;
+    }
+
+    public void setValor(Float valor) {
+        this.valor = valor;
     }
 
     public String getCor() {
