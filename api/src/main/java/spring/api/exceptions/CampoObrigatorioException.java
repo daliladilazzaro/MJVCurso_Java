@@ -7,6 +7,6 @@ package spring.api.exceptions;
 public class CampoObrigatorioException extends BusinessException {
 
     public CampoObrigatorioException(String campo) {
-        super("O %s é obrigatório", campo);
+        super("O campo %s é obrigatório", campo);
     }
 }
