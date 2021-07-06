@@ -9,7 +9,7 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 
 O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Exceptions*, *Handler*, *Model*, *Enums*, *Repository*, *Service*.
 
-![image](https://user-images.githubusercontent.com/62756757/124635150-7b7c4a80-de5d-11eb-9420-bd0c480b7865.png)
+![image](https://user-images.githubusercontent.com/62756757/124642959-da928d00-de66-11eb-8937-1b1dd055597e.png)
 
 
 ### Exemplo de Referência da API
