@@ -41,6 +41,10 @@ O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Except
 #### Exemplo de dado **localizado**
 ![image](https://user-images.githubusercontent.com/62756757/124635294-a5ce0800-de5d-11eb-821b-e8a2142b1228.png)
 
+#### Exemplo de um dado faltante ao incluir
+
+
+
 #### Request URL
 `http://localhost:8080/instrumentos`
 
