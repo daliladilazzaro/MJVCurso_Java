@@ -11,6 +11,8 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 
 ### Exemplo de Referência da API
 
+MAS ATENÇÃO!!! Para realizar o teste de delete, é necessário primeiro excluir um item da classe Instrumento antes se quiser excluir a classe de Fornecedor, pois existe um relacionamento entre elas, o que pode ocasionar um erro 500!
+
 #### Get all instrumentos
 
 ```http
