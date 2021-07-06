@@ -9,7 +9,8 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 
 O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Exceptions*, *Handler*, *Model*, *Enums*, *Repository*, *Service*.
 
-![image](![image](https://user-images.githubusercontent.com/62756757/124633036-45d66200-de5b-11eb-84ad-77ac4293922c.png))
+![image](https://user-images.githubusercontent.com/62756757/124635150-7b7c4a80-de5d-11eb-9420-bd0c480b7865.png)
+
 
 ### Exemplo de Referência da API
 
@@ -34,11 +35,11 @@ O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Except
 | `id`      | `integer` |  id |
 
 
-#### Exemplo de dado não localizado
-![image](![image](https://user-images.githubusercontent.com/62756757/124633158-643c5d80-de5b-11eb-8fec-573f03ea2501.png))
+#### Exemplo de dado **não** localizado
+![image](https://user-images.githubusercontent.com/62756757/124635242-95b62880-de5d-11eb-9235-3b4b7c684199.png)
 
 #### Exemplo de dado **localizado**
-![image](https://user-images.githubusercontent.com/62756757/124633335-8b932a80-de5b-11eb-9f47-d99214b3d748.png)
+![image](https://user-images.githubusercontent.com/62756757/124635294-a5ce0800-de5d-11eb-821b-e8a2142b1228.png)
 
 #### Request URL
 `http://localhost:8080/instrumentos`
