@@ -201,6 +201,7 @@ public List<Cadastro> busca(){
  - [Rest](https://spring.io/guides/tutorials/rest/)
  - [Oracle](https://www.oracle.com/br/technical-resources/articles/dsl/crud-rest-sb2-hibernate.html)
  - [Swagger](http://localhost:8080/swagger-ui.html)
+ - [RestAPI](https://www.infoq.com/br/articles/nivelando-sua-rest-api/)
 
 
 ## Authors 👩‍💻💖
