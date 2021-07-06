@@ -17,7 +17,7 @@ O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Except
 #### Buscar instrumentos
 
 ```http
-  GET /instrumentos/handler/{id} handlerFind
+  GET /instrumentos/buscar/{id} buscar
 ```
 
 | Parameter | Type     | Description                |
