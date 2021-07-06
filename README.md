@@ -5,42 +5,48 @@ Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, con
 
 ## Pastas do Projeto 😸🥰
 ### api
-***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, foi utilizado JPA para salvar informações no banco, Swagger para teste de API.
+***Exercício em prática***: utilizados exemplos em aula da pasta ***cadastro***, foi utilizado JPA para salvar informações no banco, Swagger para teste de API. Nele tratamos erros como: ***dado não localizado***, ***dado faltante***, e ***erro de exclusão de dados com relacionamento*** por exception. 
 
-![image](https://user-images.githubusercontent.com/62756757/124410066-fe978680-dd1f-11eb-84dd-69550a8dccd5.png)
+O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Exceptions*, *Handler*, *Model*, *Enums*, *Repository*, *Service*.
+
+![image](https://user-images.githubusercontent.com/62756757/124635150-7b7c4a80-de5d-11eb-9420-bd0c480b7865.png)
+
 
 ### Exemplo de Referência da API
 
-MAS ATENÇÃO!!! Para realizar o teste de delete, é necessário primeiro excluir um item da classe Instrumento antes se quiser excluir a classe de Fornecedor, pois existe um relacionamento entre elas, o que pode ocasionar um erro 500!
-
-#### Get all instrumentos
+#### Buscar instrumentos
 
 ```http
-  GET /instrumentos/{id} buscar
+  GET /instrumentos/handler/{id} handlerFind
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `id` | `integer` | id |
 
-#### Get instrumentos
+#### DELETE instrumentos
 
 ```http
-  GET /instrumentos/filter/${tipo}
+  DELETE /instrumentos/filter/{tipo} delete
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `tipo`      | `string` |  tipo |
+| `id`      | `integer` |  id |
 
-![image](https://user-images.githubusercontent.com/62756757/124410119-2686ea00-dd20-11eb-92b5-231ae484bd43.png)
 
+#### Exemplo de dado **não** localizado
+![image](https://user-images.githubusercontent.com/62756757/124635242-95b62880-de5d-11eb-9235-3b4b7c684199.png)
+
+#### Exemplo de dado **localizado**
+![image](https://user-images.githubusercontent.com/62756757/124635294-a5ce0800-de5d-11eb-821b-e8a2142b1228.png)
 
 #### Request URL
 `http://localhost:8080/instrumentos`
 
 #### Curl
 `curl -X GET "http://localhost:8080/instrumentos" -H "accept: application/json"`  
+`[ Base URL: localhost:8080/ ]http://localhost:8080/v2/api-docs`
 
 #### json classe instrumento
 ```
