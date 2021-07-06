@@ -42,7 +42,10 @@ O trabalho dispõe da pasta *Config* que trata do Swagger, *Controller*, *Except
 ![image](https://user-images.githubusercontent.com/62756757/124635294-a5ce0800-de5d-11eb-821b-e8a2142b1228.png)
 
 #### Exemplo de um dado faltante ao incluir
+![image](https://user-images.githubusercontent.com/62756757/124636285-c0ed4780-de5e-11eb-97db-8052eb714433.png)
 
+#### Exemplo de inclusão bem sucedida
+![image](https://user-images.githubusercontent.com/62756757/124636416-e5e1ba80-de5e-11eb-8bc3-be271857c494.png)
 
 
 #### Request URL
