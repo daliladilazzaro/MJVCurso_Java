@@ -5,15 +5,13 @@
  */
 package spring.api.exceptions;
 
-import spring.api.exceptions.BusinessException;
-
 /**
  *
  * @author dilaz
  */
-public class EnderecoIncompletoException extends BusinessException {
+public class RelacionamentoException extends BusinessException {
 
-    public EnderecoIncompletoException(String endereco) {
-        super("Endereco %s Incompleto Inválido!", endereco);
+    public RelacionamentoException(Integer id) {
+        super("Id %s está em relacionamento em outra tabela.", id);
     }
 }

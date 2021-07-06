@@ -1,6 +1,6 @@
-
 package spring.api.controller;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import spring.api.exceptions.CampoObrigatorioException;
 import spring.api.exceptions.RegistroNaoLocalizadoException;
 import spring.api.model.Instrumento;
 import spring.api.repository.InstrumentoRepository;
@@ -25,11 +26,13 @@ import spring.api.service.InstrumentoService;
 @RestController
 @RequestMapping("/instrumentos")
 public class InstrumentoController {
+
     @Autowired
     private InstrumentoService service;
-    
+//    private InstrumentoRepository repository;
+
     @PostMapping()
-    public void incluir(@RequestBody Instrumento instrumento) {
+    public void incluir(@RequestBody Instrumento instrumento) throws CampoObrigatorioException {
         service.incluir(instrumento);
     }
 
@@ -44,25 +47,25 @@ public class InstrumentoController {
                     .body(e.getMessage());
         }
     }
-    
-    
+
     @PutMapping
     public void alterar(@RequestBody Instrumento i) {
-         service.alterar(i);
+        service.alterar(i);
     }
 //
 //
+
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Integer id) throws CampoObrigatorioException {
         service.delete(id);
     }
-    
-          @GetMapping(value = "handler/{id}")
-    public Instrumento handlerFind(@PathVariable("id") Integer id) {
+
+    @GetMapping(value = "handler/{id}")
+    public Instrumento handlerFind(@PathVariable("id") Integer id) throws RegistroNaoLocalizadoException {
         Instrumento instrumento = service.buscar(id);
         return instrumento;
     }
-//    private InstrumentoRepository repository;
+
 //    
 //    @GetMapping
 //    public Iterable<Instrumento> list(){

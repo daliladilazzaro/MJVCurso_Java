@@ -22,7 +22,7 @@ public class Fornecedor {
     private String empresa;
     @Column(length = 50, nullable = false)
     private String logradouro;
-    @Column(length = 40, nullable = false)
+    @Column(name = "nome_bairro", length = 40, nullable = false)
     private String bairro;
     @Column(length = 20, nullable = false)
     private String numero;

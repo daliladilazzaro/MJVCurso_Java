@@ -50,6 +50,22 @@ public class FornecedorController {
                     .body(e.getMessage());
         }
     }
+
+    @PutMapping
+    public void alterar(@RequestBody Fornecedor f) {
+        service.alterar(f);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Integer id) {
+        service.delete(id);
+    }
+
+    @GetMapping(value = "handler/{id}")
+    public Fornecedor handlerFind(@PathVariable("id") Integer id) {
+        Fornecedor fornecedor = service.buscar(id);
+        return fornecedor;
+    }
 //    private FornecedorRepository repository;
 //
 //    @GetMapping
@@ -62,41 +78,17 @@ public class FornecedorController {
 //        repository.save(f);
 //    }
 //
-    @PutMapping
-    public void alterar(@RequestBody Fornecedor f) {
-         service.alterar(f);
-    }
+
 //
 //    @GetMapping(value = "/filter/{empresa}")
 //    public Iterable<Fornecedor> list(@PathVariable("empresa") String empresa) {
 //        return repository.findByEmpresaContaining(empresa);
 //    }
 //
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Integer id) {
-        service.delete(id);
-    }
-
 //    @DeleteMapping()
 //    public void deleteByParam(@RequestParam("id") Integer id, @RequestParam("empresa") String empresa) {
 //        repository.deleteById(id);
 //    }
-
-//    @GetMapping(value = "/{id}")
-//    public ResponseEntity<Fornecedor> bucar(@PathVariable("id") Integer id) {
-//        Fornecedor opt = service.buscar(id);
-//        if (opt.isPresent()) {
-//            return new ResponseEntity<Fornecedor>(opt.get(), HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-    
-    @GetMapping(value = "handler/{id}")
-    public Fornecedor handlerFind(@PathVariable("id") Integer id) {
-        Fornecedor fornecedor = service.buscar(id);
-        return fornecedor;
-    }
 //    @GetMapping(value = "/{id}")
 //    public Fornecedor buscar(@PathVariable("id") Integer id) {
 //        return repository.findById(id).orElse(null);

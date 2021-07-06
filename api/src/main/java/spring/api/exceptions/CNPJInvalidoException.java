@@ -7,7 +7,7 @@ package spring.api.exceptions;
 public class CNPJInvalidoException extends BusinessException {
 
     public CNPJInvalidoException(String cnpj) {
-        super("CPF %s Inválido ", cnpj);
+        super("%s Inválido ", cnpj);
     }
 
 }

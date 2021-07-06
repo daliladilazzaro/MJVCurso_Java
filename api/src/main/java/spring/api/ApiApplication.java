@@ -19,7 +19,7 @@ public class ApiApplication {
     }
 
     @Bean
-    public CommandLineRunner run(InstrumentoRepository repository) throws Exception {
+    public CommandLineRunner runn(InstrumentoRepository repository) throws Exception {
         return args -> {
             //teste com instrumento
             Instrumento instru = new Instrumento();
@@ -27,7 +27,7 @@ public class ApiApplication {
             instru.setMarca("BcRich");
             instru.setModelo("Warlock");
             instru.setCor("Branca");
-            instru.setValor(5999.99F);
+            instru.setValor(5999F);
             Fornecedor fornece = new Fornecedor();
             fornece.setEmpresa("Giannini");
             fornece.setLogradouro("Rua do Giannini");

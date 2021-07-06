@@ -9,6 +9,7 @@ import java.lang.reflect.UndeclaredThrowableException;
 import java.time.LocalDateTime;
 import javax.annotation.Resource;
 import org.springframework.context.MessageSource;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,6 +32,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     private ResponseEntity<Object> handleGeneral(Exception e, WebRequest request) {
+        e.printStackTrace();
         if (e.getClass().isAssignableFrom(UndeclaredThrowableException.class)) {
             UndeclaredThrowableException exception = (UndeclaredThrowableException) e;
             Class<? extends Throwable> exceptionClass = exception.getUndeclaredThrowable().getClass();
@@ -52,6 +54,21 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     private ResponseEntity<Object> handleBusinessException(BusinessException e, WebRequest request) {
         ResponseError error = new ResponseError();
         error.setError(e.getMessage());
+        error.setStatusCode(HttpStatus.CONFLICT.value());
+        error.setStatus("error");
+        error.setTimestamp(LocalDateTime.now());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        return handleExceptionInternal(e, error, headers, HttpStatus.CONFLICT, request);
+    }
+    
+    
+    @ExceptionHandler({EmptyResultDataAccessException.class})
+    private ResponseEntity<Object> handleDadoNaoEncontradoException
+        (EmptyResultDataAccessException e, WebRequest request) {
+        ResponseError error = new ResponseError();
+        error.setError("Entidade não encontrado!");
         error.setStatusCode(HttpStatus.CONFLICT.value());
         error.setStatus("error");
         error.setTimestamp(LocalDateTime.now());
