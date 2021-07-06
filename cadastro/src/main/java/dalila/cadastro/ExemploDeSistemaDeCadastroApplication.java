@@ -55,10 +55,10 @@ public class ExemploDeSistemaDeCadastroApplication {
             ce.setTelefone(14597456212L);
             c.setContato1(ce);
             a.setCadastro(c);
-//            ad.save(a);
-            ObjectMapper mpr = new ObjectMapper();
-            String json = mpr.writeValueAsString(c);
-            System.out.println(json);
+            ad.save(a);
+//            ObjectMapper mpr = new ObjectMapper();
+//            String json = mpr.writeValueAsString(c);
+//            System.out.println(json);
 
 //            List <Aluno> alun=dao.findAll();
 ////            List <Aluno> alun=dao.listAll();
