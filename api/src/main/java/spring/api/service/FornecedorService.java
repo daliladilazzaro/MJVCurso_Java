@@ -72,17 +72,17 @@ public class FornecedorService {
             throw new RelacionamentoException(id);
         } 
     }
-//    public void deleteByParam(Integer id) {
-//        try {
-//        if (id== null) {
-//            throw new CampoObrigatorioException("id");
-//        }
-//            
-//        repository.deleteById(id);
-//        } catch ( DataIntegrityViolationException e) {
-//            throw new RelacionamentoException(id);
-//        } 
-//    }
+    public void deleteByParam(Integer id) {
+        try {
+        if (id== null) {
+            throw new CampoObrigatorioException("id");
+        }
+            
+        repository.deleteById(id);
+        } catch ( DataIntegrityViolationException e) {
+            throw new RelacionamentoException(id);
+        } 
+    }
 
     public Fornecedor buscar(Integer id) throws RegistroNaoLocalizadoException {
         Optional<Fornecedor> opt = repository.findById(id);

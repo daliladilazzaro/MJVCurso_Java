@@ -50,7 +50,6 @@ public class FornecedorController {
                     .body(e.getMessage());
         }
     }
-//    private FornecedorRepository repository;
 //
 //    @GetMapping
 //    public Iterable<Fornecedor> list() {
@@ -77,10 +76,10 @@ public class FornecedorController {
         service.delete(id);
     }
 
-//    @DeleteMapping()
-//    public void deleteByParam(@RequestParam("id") Integer id, @RequestParam("empresa") String empresa) {
-//        repository.deleteById(id);
-//    }
+    @DeleteMapping()
+    public void deleteByParam(@RequestParam("id") Integer id, @RequestParam("empresa") String empresa) {
+        service.deleteByParam(id);
+    }
 
 
     

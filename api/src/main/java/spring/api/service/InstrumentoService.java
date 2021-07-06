@@ -2,10 +2,12 @@ package spring.api.service;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import spring.api.exceptions.CNPJInvalidoException;
 import spring.api.exceptions.CampoObrigatorioException;
 import spring.api.exceptions.RegistroNaoLocalizadoException;
+import spring.api.exceptions.RelacionamentoException;
 import spring.api.model.Fornecedor;
 import spring.api.model.Instrumento;
 import spring.api.repository.InstrumentoRepository;
@@ -80,6 +82,18 @@ public class InstrumentoService {
         repository.deleteById(id);
     }
 
+    public void deleteByParam(Integer id) {
+        try {
+        if (id== null) {
+            throw new CampoObrigatorioException("id");
+        }
+            
+        repository.deleteById(id);
+        } catch ( DataIntegrityViolationException e) {
+            throw new RelacionamentoException(id);
+        } 
+    }
+    
     public Instrumento buscar(Integer id) throws RegistroNaoLocalizadoException {
         Optional<Instrumento> opt = repository.findById(id);
         if (opt.isPresent()) {
