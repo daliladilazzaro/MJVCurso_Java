@@ -60,8 +60,8 @@ public class InstrumentoController {
         service.delete(id);
     }
 
-    @GetMapping(value = "handler/{id}")
-    public Instrumento handlerFind(@PathVariable("id") Integer id) throws RegistroNaoLocalizadoException {
+    @GetMapping(value = "buscar/{id}")
+    public Instrumento buscar(@PathVariable("id") Integer id) throws RegistroNaoLocalizadoException {
         Instrumento instrumento = service.buscar(id);
         return instrumento;
     }
