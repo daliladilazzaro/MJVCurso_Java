@@ -1,4 +1,4 @@
-# Curso de Java ☕ pela MJV 📚 
+# Curso de Java com ênfase em SpringBoot e API☕ pela MJV 📚 
 
 Exercícios do curso de Java com Ênfase em SpringBoot e API. Neste projeto, contém pastas com exercícios realizados ao decorrer do curso, com exemplos práticos e teóricos. Abaixo estão listados em no conteúdo de suas respectivas pastas, para fácil orientação. 
 
